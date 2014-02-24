@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>
+		Contributing to jQuery - Helping us help you.
+	</title>
+	<meta name="description" content="jquery-wp-content And You!">
+	<meta name="author" content="Ryan Neufeld">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/reveal.min.css" type="text/css">
+	<link rel="stylesheet" href="css/theme/default.css" id="theme" type="text/css"><!-- For syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css" type="text/css"><!-- If the query includes 'print-pdf', use the PDF print sheet -->
+
+	<script type="text/javascript">
+	document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+	</script><!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h1>
+					Contributing to jQuery
+				</h1>
+				<h3>
+					Helping us help you.
+				</h3>
+				<p>
+					<small>Created by <a href="http://github.com/ryanneufeld">Ryan Neufled</a> / <a href="http://twitter.com/ryanneufeld">@ryanneufeld</a></small>
+				</p>
+			</section>
+			<section>
+				<h2>
+					Who am I?
+				</h2>
+				<img src="https://secure.gravatar.com/avatar/73d5a05c6ca441d3b2a0e5f20e965ed9?size=120">
+				<h3>
+					Ryan Neufeld
+				</h3>
+				<p>
+					Technical Lead for <a target="_blank" href="http://www.metrolyrics.com/">MetroLyrics.com</a><br>
+					<small>Property of CBS Interactive</small>
+				</p>
+				<p>
+					jQuery Infrastructure Team
+				</p>
+				<aside class="notes">
+				   Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+
+				</aside>
+			</section>
+			<section>
+				<h2>
+					API Docs
+				</h2>
+				<p>
+					They're important. Right?
+				</p>
+			</section>
+			<section>
+				<p>
+					No one wants to use a library that has bad documentation.
+				</p>
+			</section>
+			<section>
+				<blockquote>
+					“API Documentation should be accurate and up-to-date”<br>
+					— Every Developer I Know
+				</blockquote>
+			</section>
+			<section>
+				<h2>
+					Once upon a time
+				</h2>
+				<h4>
+					<code>docs.jquery.com</code>
+				</h4>
+				<ul>
+					<li>Let's crowdsource the documentation! Make it a wiki!
+					</li>
+					<li>Everybody can help!
+					</li>
+					<li>Caveat: Anybody can spam!
+					</li>
+					<li>Solution: Turn off user registration
+					</li>
+					<li>Result: Nobody can help
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h1>
+					Well, not <em>nobody</em>
+				</h1>
+				<ul>
+					<li>Anyone who had an account still could use it
+					</li>
+					<li>Admins could create accounts for new people…
+					</li>
+					<li>…if new people could get in touch with admins…
+					</li>
+					<li>…and not be spammers…
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Unfortunately, this sucks for everyone:</h2>
+				<img src="images/wiki-editor.png" />
+			</section>
+
+			<section>
+				<h1>There has to be a better way</h1>
+				<ul>
+					<li>API documentation should be <em>structured</em></li>
+					<li>And it shouldn't be in a wiki</li>
+				</ul>
+			</section>
+
+
+			<section>
+				<blockquote>"Hey, lets convert it all to XML and put it in Wordpress"</blockquote>
+			</section>
+
+			<section class="text" style="margin-top:135px;">
+				<h1>Great idea!!&hellip;</h1>
+				<img src="images/wordpress-editor.png" width="100%"/>
+				<h3>Oh&hellip;right&hellip;</h3>
+			</section>
+
+			<section>
+				<h3>Traditional CMSes weren't any better than a wiki</h3>
+				<ul>
+					<li>Requires special permission to access</li>
+					<li>Editing experience is subpar</li>
+					<li>Changes aren't tracked in version control</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Not to mention</h3>
+				<ul>
+					<li>Volatile content lives in the database, needs to be backed up</li>
+					<li><strong>No issue tracking</strong></li>
+					<li>Wholesale duplication of templates/CSS across sites</li>
+				</ul>
+			</section>
+
+
+			<section>
+				<h2>So, that sucked.</h2>
+				<p>Now what?</p>
+			</section>
+
+			<section>
+				<h2>What works for code?</h2>
+				<ul class="fragment">
+					<li>Version control</li>
+					<li>Issue tracking</li>
+					<li>Develop locally</li>
+				</ul>
+			</section>
+
+
+			<section >
+				<!-- <h1>All Hands On Deck!</h1> -->
+				<p><strong>Anyone</strong> should be able to submit a fix or
+				improvement, no matter how large or how small, to any jQuery web
+				site, using their text editor of choice.</p>
+			</section>
+
+			<section>
+				<p>Works for code. Will it work for our sites too?
+					<ul>
+						<li>Version control</li>
+						<li>Issue tracking</li>
+						<li>Develop locally</li>
+					</ul>
+				</p>
+			</section>
+
+			<section>
+				<h1>Version Control?</h1>
+				<h2 class='fragment'>Yes!</h2>
+				<h2 class='fragment'>We put it all on GitHub</h2>
+			</section>
+
+			<section data-transition="fade">
+				<h2>That's right, all of it.</h2>
+				<ul>
+					<li><a href="http://github.com/jquery/jquery.com/">jquery.com</a></li>
+					<li><a href="http://github.com/jquery/api.jquery.com/">api.jquery.com</a></li>
+					<li><a href="http://github.com/jquery/jquery.com/">plugins.jquery.com</a></li>
+					<li><a href="http://github.com/jquery/learn.jquery.com/">learn.jquery.com</a></li>
+					<li><a href="http://github.com/jquery/jqueryui.com/">jqueryui.com</a></li>
+					<li><a href="http://github.com/jquery/api.jqueryui.com/">api.jqueryui.com</a></li>
+					<li><a href="http://github.com/jquery/download.jqueryui.com/">download.jqueryui.com</a></li>
+					<li><a href="http://github.com/jquery/jquerymobile.com/">jquerymobile.com</a></li>
+					<li><a href="http://github.com/jquery/api.jquerymobile.com/">api.jquerymobile.com</a></li>
+				</ul>
+			</section>
+			<section data-transition="fade">
+				<h2>That's right, all of it.</h2>
+				<ul>
+					<li><a href="http://github.com/jquery/jquery.org/">jquery.org</a></li>
+					<li><a href="http://github.com/jquery/contribute.jquery.org/">contribute.jquery.org</a></li>
+					<li><a href="http://github.com/jquery/jquery.org/">events.jquery.org</a></li>
+					<li><a href="http://github.com/jquery/irc.jquery.org/">irc.jquery.org </a></li>
+					<li><a href="http://github.com/jquery/qunitjs.com/">qunitjs.com</a></li>
+					<li><a href="http://github.com/jquery/api.qunitjs.com/">api.qunitjs.com</a></li>
+					<li><a href="http://github.com/jquery/sizzlejs.com/">sizzlejs.com</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>How do we make all this work on GitHub?</h2>
+			</section>
+
+			<section>
+				<h3>Requirements</h3>
+				<ul>
+					<li>Content in Markdown</li>
+					<li>Managed in Git & GitHub</li>
+					<li>Published via Wordpress</li>
+				</ul>
+			</section>
+
+			<section>
+				<h1>Wordpress?!</h2>
+				<h3>Didn't you say that CMSes were bad?</h3>
+				<p class='fragment'>I did, I'll explain</p>
+			</section>
+
+			<section>
+				<h2>Solved Problems</h2>
+				<ul>
+					<li>Taxonomies</li>
+					<li>Searching</li>
+					<li>User Managment</li>
+					<li>Theme Inheritance</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>But what about the WYSIWYG?</h2>
+			</section>
+
+			<section>
+				<h2>There's a better way!</h2>
+				<ul>
+					<li class="fragment">Wordpress XML-RPC</li>
+					<li class="fragment" style="white-space: nowrap;"><a href="https://www.npmjs.org/package/grunt-jquery-content">grunt-jquery-content</a></li>
+					<li class="fragment"><a href="https://www.npmjs.org/package/grunt-wordpress">grunt-wordpress</a></li>
+				</ul>
+				<footer class="fragment"><small><small>Watch the <a href="http://www.youtube.com/watch?v=3t61RoAs7E8">jQuery Portland Keynote</a> video for more of this story</small></small></footer>
+			</section>
+
+			<section>
+				<h2>Code Representing Content</h2>
+				<pre><code data-trim>
+var client = wordpress.createClient({ ... });
+client.newPost({
+	title: "Intro to jQuery",
+	content: "&lt;p>jQuery is ...&lt;/p>"
+});
+				</code></pre>
+				<span>becomes:</span>
+				<pre><code data-trim>
+&lt;script>{
+	"title": "Intro to jQuery"
+}&lt;/script>
+&lt;p>jQuery is ...&lt;/p>
+				</code></pre>
+				<p>Valid HTML, invisible metadata, local preview</p>
+			</section>
+
+
+
+			<section>
+				<h2>Will what works for code<br> work for our sites too?</h2>
+				<ul>
+					<li>Version control <span class="fragment highlight-green">&#x2713;<span></li>
+					<li>Issue tracking <span class="fragment highlight-green">&#x2713;<span></li>
+					<li>Develop locally <span class="fragment highlight-yellow">?<span></li>
+				</ul>
+			</section>
+
+
+
+
+
+			<section>
+				<h1>
+					THE END
+				</h1>
+				<h3>
+					BY Ryan Neufeld
+				</h3>
+			</section>
+		</div>
+	</div><script src="lib/js/head.min.js" type="text/javascript">
+</script><script src="js/reveal.min.js" type="text/javascript">
+</script><script type="text/javascript">
+
+		// Full list of configuration options available here:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: false,
+			progress: false,
+			history: true,
+			center: true,
+
+			theme: Reveal.getQueryHash().theme || 'moon', // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+			// Parallax scrolling
+			// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+			// parallaxBackgroundSize: '2100px 900px',
+
+			// Optional libraries used to extend on reveal.js
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+				{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			]
+		});
+
+	</script>
+</body>
+</html>
