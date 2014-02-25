@@ -11,9 +11,12 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="css/reveal.min.css" type="text/css">
-	<link rel="stylesheet" href="css/theme/default.css" id="theme" type="text/css"><!-- For syntax highlighting -->
-	<link rel="stylesheet" href="lib/css/zenburn.css" type="text/css"><!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<link rel="stylesheet" href="css/theme/default.css" id="theme" type="text/css">
 
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css" type="text/css">
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
 	<script type="text/javascript">
 	document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
 	</script><!--[if lt IE 9]>
@@ -25,353 +28,140 @@
 		<!-- Any section element inside of this container is displayed as a slide -->
 		<div class="slides">
 			<section>
-				<h1>
-					Contributing to jQuery
-				</h1>
-				<h3>
-					Helping us help you.
-				</h3>
+				<section>
+					<img src="https://secure.gravatar.com/avatar/73d5a05c6ca441d3b2a0e5f20e965ed9?size=120">
+					<h3>Ryan Neufeld</h3>
+					<p>
+						Technical Lead for <a target="_blank" href="http://www.metrolyrics.com/">MetroLyrics.com</a><br>
+						<small>Property of CBS Interactive</small>
+					</p>
+					<p>
+						jQuery Infrastructure Team
+					</p>
+				</section>
+
+			</section>
+
+			<section>
+				<h1>Contributing <br>to jQuery Docs</h1>
+				<h3>Helping us help you.</h3>
+				<h5><small><small><small><small>This is what I think you're gonna say when you see this line. "That line under his heading looks so jaggedy."
+				"Hey dude, checkout out the source code, he hid something funny in it." "Oh man, that's not funny at all." "heh" "lol" "I can't belive this is his first talk"</small></small></small></small></h5>
 				<p>
 					<small>Created by <a href="http://github.com/ryanneufeld">Ryan Neufled</a> / <a href="http://twitter.com/ryanneufeld">@ryanneufeld</a></small>
 				</p>
 			</section>
-			<section>
-				<h2>
-					Who am I?
-				</h2>
-				<img src="https://secure.gravatar.com/avatar/73d5a05c6ca441d3b2a0e5f20e965ed9?size=120">
-				<h3>
-					Ryan Neufeld
-				</h3>
-				<p>
-					Technical Lead for <a target="_blank" href="http://www.metrolyrics.com/">MetroLyrics.com</a><br>
-					<small>Property of CBS Interactive</small>
-				</p>
-				<p>
-					jQuery Infrastructure Team
-				</p>
-				<aside class="notes">
-				   Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
 
+			<section>
+				<h3>We want you to contribute to jQuery</h3>
+				<h5>Not just libraries</h5>
+				<ul>
+					<li class="fragment">Websites</li>
+					<li class="fragment">API Documentation</li>
+					<li class="fragment">Tutorials</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>The same way you do with code</h3>
+				<aside class="notes">
+					<ul>
+						<li>Version Control</li>
+						<li>Issue Tracking</li>
+						<li>Local Development</li>
+					</ul>
 				</aside>
 			</section>
+
 			<section>
-				<h2>
-					API Docs
-				</h2>
-				<p>
-					They're important. Right?
-				</p>
-			</section>
-			<section>
-				<p>
-					No one wants to use a library that has bad documentation.
-				</p>
-			</section>
-			<section>
-				<blockquote>
-					“API Documentation should be accurate and up-to-date”<br>
-					— Every Developer I Know
-				</blockquote>
-			</section>
-			<section>
-				<h2>
-					Once upon a time
-				</h2>
-				<h4>
-					<code>docs.jquery.com</code>
-				</h4>
-				<ul>
-					<li>Let's crowdsource the documentation! Make it a wiki!
-					</li>
-					<li>Everybody can help!
-					</li>
-					<li>Caveat: Anybody can spam!
-					</li>
-					<li>Solution: Turn off user registration
-					</li>
-					<li>Result: Nobody can help
-					</li>
-				</ul>
-			</section>
-			<section>
-				<h1>
-					Well, not <em>nobody</em>
-				</h1>
-				<ul>
-					<li>Anyone who had an account still could use it
-					</li>
-					<li>Admins could create accounts for new people…
-					</li>
-					<li>…if new people could get in touch with admins…
-					</li>
-					<li>…and not be spammers…
-					</li>
-				</ul>
-			</section>
-			<section>
-				<h2>Unfortunately, this sucks for everyone:</h2>
-				<img src="images/wiki-editor.png" />
+				<h2>We made it easy</h2>
+				<aside class="notes">
+					<ul>
+						<li>You don't need a web server</li>
+						<li>You don't need a special account</li>
+						<li>You can do it right now!</li>
+					</ul>
+				</aside>
 			</section>
 
 			<section>
-				<h1>There has to be a better way</h1>
-				<ul>
-					<li>API documentation should be <em>structured</em></li>
-					<li>And it shouldn't be in a wiki</li>
-				</ul>
-			</section>
+				<section>
+					<h2>Story Time</h2>
+				</section>
+				<section>
+					<h4><code>docs.jquery.com</code></h4>
+					<h5 class="fragment">It was a wiki</h5>
 
+					<aside class="notes">
+						<ul>
+							<li>Let's crowdsource the documentation! Make it a wiki!</li>
+							<li>Everybody can help!</li>
+							<li>Caveat: Anybody can spam!</li>
+							<li>Solution: Turn off user registration</li>
+							<li>Result: Nobody can help</li>
+						</ul>
+					</aside>
+				</section>
+				<section>
+					<h2>Unfortunately, this sucks for everyone:</h2>
+					<img src="images/wiki-editor.png" />
+				</section>
+				<section>
+					<blockquote>"Hey, lets convert it all to XML and put it in Wordpress"</blockquote>
+				</section>
 
-			<section>
-				<blockquote>"Hey, lets convert it all to XML and put it in Wordpress"</blockquote>
-			</section>
-
-			<section class="text" style="margin-top:135px;">
-				<h1>Great idea!!&hellip;</h1>
-				<img src="images/wordpress-editor.png" width="100%"/>
-				<h3>Oh&hellip;right&hellip;</h3>
-			</section>
-
-			<section>
-				<h3>Traditional CMSes weren't any better than a wiki</h3>
-				<ul>
-					<li>Requires special permission to access</li>
-					<li>Editing experience is subpar</li>
-					<li>Changes aren't tracked in version control</li>
-				</ul>
-			</section>
-
-			<section>
-				<h3>Not to mention</h3>
-				<ul>
-					<li>Volatile content lives in the database, needs to be backed up</li>
-					<li><strong>No issue tracking</strong></li>
-					<li>Wholesale duplication of templates/CSS across sites</li>
-				</ul>
-			</section>
-
-
-			<section>
-				<h2>So, that sucked.</h2>
-				<p>Now what?</p>
+				<section class="text" style="margin-top:135px;">
+					<h2>Great idea!!&hellip;</h2>
+					<img src="images/wordpress-editor.png"/>
+					<aside class="nodes">Who would do this?</aside>
+				</section>
+				<section>
+					<h2>jquery-wp-content & grunt</h2>
+				</section>
+				<section>
+					<img src="http://i.imgur.com/FDce0wl.gif" alt="">
+				</section>
 			</section>
 
 			<section>
-				<h2>What works for code?</h2>
-				<ul class="fragment">
-					<li>Version control</li>
-					<li>Issue tracking</li>
-					<li>Develop locally</li>
-				</ul>
-			</section>
-
-
-			<section >
 				<!-- <h1>All Hands On Deck!</h1> -->
 				<p><strong>Anyone</strong> should be able to submit a fix or
-				improvement, no matter how large or how small, to any jQuery web
-				site, using their text editor of choice.</p>
+						improvement,<br>
+						no matter how large or how small,<br>
+						to any jQuery web site, using their text editor of choice.</p>
 			</section>
 
 			<section>
-				<p>Works for code. Will it work for our sites too?
-					<ul>
-						<li>Version control</li>
-						<li>Issue tracking</li>
-						<li>Develop locally</li>
-					</ul>
-				</p>
+				<h3>Vagrant & Virtualbox</h3>
+				<aside class="notes">Who's used Vagrant and/or Virtualbox</aside>
+			</section>
+
+
+			<section>
+				<section>
+					<h2>Demo Time!</h2>
+				</section>
+				<section>
+					<img src="http://www.reactiongifs.us/wp-content/uploads/2013/07/its_working_star_wars.gif" alt="">
+				</section>
 			</section>
 
 			<section>
-				<h1>Version Control?</h1>
-				<h2 class='fragment'>Yes!</h2>
-				<h2 class='fragment'>We put it all on GitHub</h2>
-			</section>
+				<h2>Get Involved!</h2>
+				<h3>Join over 100 contributors</h3>
 
-			<section data-transition="fade">
-				<h2>That's right, all of it.</h2>
 				<ul>
-					<li><a href="http://github.com/jquery/jquery.com/">jquery.com</a></li>
-					<li><a href="http://github.com/jquery/api.jquery.com/">api.jquery.com</a></li>
-					<li><a href="http://github.com/jquery/jquery.com/">plugins.jquery.com</a></li>
-					<li><a href="http://github.com/jquery/learn.jquery.com/">learn.jquery.com</a></li>
-					<li><a href="http://github.com/jquery/jqueryui.com/">jqueryui.com</a></li>
-					<li><a href="http://github.com/jquery/api.jqueryui.com/">api.jqueryui.com</a></li>
-					<li><a href="http://github.com/jquery/download.jqueryui.com/">download.jqueryui.com</a></li>
-					<li><a href="http://github.com/jquery/jquerymobile.com/">jquerymobile.com</a></li>
-					<li><a href="http://github.com/jquery/api.jquerymobile.com/">api.jquerymobile.com</a></li>
+					<li>It's easy</li>
+					<li>Get your name on the commiter list</li>
+					<li>Meet new people</li>
+					<li>It's fun!</li>
 				</ul>
-			</section>
-			<section data-transition="fade">
-				<h2>That's right, all of it.</h2>
-				<ul>
-					<li><a href="http://github.com/jquery/jquery.org/">jquery.org</a></li>
-					<li><a href="http://github.com/jquery/contribute.jquery.org/">contribute.jquery.org</a></li>
-					<li><a href="http://github.com/jquery/jquery.org/">events.jquery.org</a></li>
-					<li><a href="http://github.com/jquery/irc.jquery.org/">irc.jquery.org </a></li>
-					<li><a href="http://github.com/jquery/qunitjs.com/">qunitjs.com</a></li>
-					<li><a href="http://github.com/jquery/api.qunitjs.com/">api.qunitjs.com</a></li>
-					<li><a href="http://github.com/jquery/sizzlejs.com/">sizzlejs.com</a></li>
-				</ul>
+
 			</section>
 
 			<section>
-				<h2>How do we make all this work on GitHub?</h2>
-			</section>
-
-			<section>
-				<h3>Requirements</h3>
-				<ul>
-					<li>Content in Markdown</li>
-					<li>Managed in Git & GitHub</li>
-					<li>Published via Wordpress</li>
-				</ul>
-			</section>
-
-			<section>
-				<h1>Wordpress?!</h2>
-				<h3>Didn't you say that CMSes were bad?</h3>
-				<p class='fragment'>I did, I'll explain</p>
-			</section>
-
-			<section>
-				<h2>Solved Problems</h2>
-				<ul>
-					<li>Taxonomies</li>
-					<li>Searching</li>
-					<li>User Managment</li>
-					<li>Theme Inheritance</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>But what about the WYSIWYG?</h2>
-				<img src="images/wordpress-editor.png" width="100%"/>
-				<p>Pretty sure you said this sucked.</p>
-			</section>
-
-			<section>
-				<h2>There's a better way!</h2>
-			</section>
-
-			<section>
-				<h2>Code Representing Content</h2>
-				<pre><code data-trim>
-var client = wordpress.createClient({ ... });
-client.newPost({
-	title: "Intro to jQuery",
-	content: "&lt;p>jQuery is ...&lt;/p>"
-});
-				</code></pre>
-				<span>becomes:</span>
-				<pre><code data-trim>
-&lt;script>{
-	"title": "Intro to jQuery"
-}&lt;/script>
-&lt;p>jQuery is ...&lt;/p>
-				</code></pre>
-				<p>Valid HTML, invisible metadata, local preview</p>
-			</section>
-
-			<section>
-				<h1>Multiple Posts</h1>
-				<p>Now we can represent all the data for a single post, but we still need to manage the full site.</p>
-				<p>So we use an obvious convention of organizing the HTML files into directories and use the paths as the URLs for the site. This lets us easily track what is being added, edited, and removed.</p>
-			</section>
-
-			<section>
-				<h3>But Ryan, how does this get into wordpress?</h3>
-				<ul>
-					<li class="fragment">Wordpress XML-RPC</li>
-					<li class="fragment"><a href="https://www.npmjs.org/package/grunt-wordpress">grunt-wordpress</a></li>
-					<li class="fragment" style="white-space: nowrap;"><a href="https://www.npmjs.org/package/grunt-jquery-content">grunt-jquery-content</a></li>
-				</ul>
-				<footer class="fragment"><small><small>Watch the <a href="http://www.youtube.com/watch?v=3t61RoAs7E8">jQuery Portland Keynote</a> video for more of this story</small></small></footer>
-			</section>
-
-			<section>
-				<h2>Will what works for code<br> work for our sites too?</h2>
-				<ul>
-					<li>Version control <span class="fragment highlight-green">&#x2713;<span></li>
-					<li>Issue tracking <span class="fragment highlight-green">&#x2713;<span></li>
-					<li>Develop locally <span class="fragment highlight-yellow">?<span></li>
-				</ul>
-			</section>
-
-			<section>
-				<h1>Local Development</h1>
-				<p>It's really easy!</p>
-			</section>
-			<section>
-				<h4>Prerequisites</h4>
-				<p>Currently if you want to develop for jQuery sites using jquery-wp-content you can follow the instructions in the README.md</p>
-			</section>
-			<section>
-				<h3><a href="https://raw.github.com/jquery/jquery-wp-content/master/README.md">README.md</a></h3>
-				<p>This install guide assumes you already have certain prerequisites already configured within your environment.
-				<ul>
-					<li>Apache</li>
-					<li>MySQL</li>
-					<li>PHP</li>
-				</ul>
-				</p>
-			</section>
-
-			<section>
-				<h3>Virtual host, /etc/hosts... What is.. I don't even</h3>
-				<p>You mean <strong><em>I</em></strong> have to install Apache and do all that other stuff?!</p>
-				<p class='fragment'>I thought you said this was gonna be easy Ryan.<br> This isn't easy.</p>
-			</section>
-
-			<section>
-				<h2>Would I Lie To You?</h2>
-				<p class="fragment"><small>Possibly, but not about this</small></p>
-			</section>
-
-			<section>
-				<h2>A new challenger appears</h2>
-				<ul>
-					<li>Virtualbox</li>
-					<li>Vagrant</li>
-					<li>And ... </li>
-					<li class="fragment">&hellip;no and then!</li>
-				</ul>
-			</section>
-
-			<section>
-				<h2>Virtualbox</h2>
-				<p>It's the best of the free (as in beer at least) virtual machine softwares that works on all OSes<small><sup>1<sup></small></p>
-				<p>It's free to use vagrant with Virtualbox without a license for Vagrant</p>
-				<footer><small><small>1: Windows 8.1 excepted</small></small></footer>
-			</section>
-
-			<section>
-				<h1>Vagrant</h1>
-				<p>Vagrant is a ruby project that makes working with virtual machines nearly painless</p>
-			</section>
-
-			<section>
-				<h2>You don't need to know ruby</h2>
-				<h4>But it doesn't hurt</h4>
-			</section>
-
-			<section>
-				<h2>Vagrantfile</h2>
-			</section>
-
-			<section>
-				<h1>Demo Time!</h1>
-			</section>
-
-			<section>
-				<h1>
-					THE END?
-				</h1>
-				<h3>
-					BY Ryan Neufeld
-				</h3>
+				<h1>End Of Line</h1>
+				<h3>By Ryan Neufeld</h3>
 			</section>
 		</div>
 	</div>
